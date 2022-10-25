@@ -1,6 +1,11 @@
 package com.tools.clone.pastebin.Model.dto;
 
-public class UserRequest {
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class ConsumerRequest {
 
     private String name;
     private String password;

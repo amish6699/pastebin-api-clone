@@ -7,7 +7,7 @@ spring:
     username: pastebin
     url: jdbc:h2:./src/main/resources/H2DB;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
     driverClassName: org.h2.Driver
-    password: pastebin
+    password: pastebin@123
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
@@ -16,4 +16,10 @@ spring:
   h2:
     console:
       enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
 

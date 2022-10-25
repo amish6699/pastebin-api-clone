@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Data
 @Builder
-public class PasteBinResponse {
+public class ConsumerResponse {
 
+    private Long userId;
     private String username;
-    private String url;
     private String status;
-    private String body;
+
 }

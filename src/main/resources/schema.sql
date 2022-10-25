@@ -1,18 +1,22 @@
-DROP TABLE IF EXISTS "USER";
-
-CREATE TABLE "USER" (
-"id" INT AUTO_INCREMENT  PRIMARY KEY,
-"username" VARCHAR(50) NOT NULL UNIQUE,
-"password" VARCHAR(50) NOT NULL,
-"name" VARCHAR(50) NOT NULL,
-"crt_date" TIMESTAMP
+drop 
+  table if exists consumer; 
+drop 
+  table if exists pastebin; 
+  
+create table consumer (
+  id bigint not null,
+  crt_date timestamp,
+  name varchar(255),
+  password varchar(255),
+  username varchar(255),
+  primary key (id)
 );
+create table pastebin (
+  id bigint not null,
+  body varchar(255),
+  crt_date date,
+  expiration_time bigint,
+  user_name varchar(255),
+  primary key (id)
+)
 
-DROP TABLE IF EXISTS "PASTEBIN";
-
-CREATE TABLE "PASTEBIN" (
-"id" INT AUTO_INCREMENT  PRIMARY KEY,
-"body" VARCHAR(500),
-"user_name" VARCHAR(50) NOT NULL DEFAULT 'GUEST',
-"crt_date" TIMESTAMP
-);
